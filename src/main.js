@@ -13,9 +13,10 @@ import VueRouter from 'vue-router'
 //import NProgress from 'nprogress'
 //import 'nprogress/nprogress.css'
 import App from './App.vue'
-import routes from './routes'
+import routes from './components/routes'
 
 import PMT from './config.js'
+import storageKeyName from './components/storageKeyName.js'
 // import Mock from './mock'
 // Mock.bootstrap();
 // import 'font-awesome/css/font-awesome.min.css'
@@ -24,6 +25,7 @@ Vue.use(ElementUI)
 Vue.use(VueRouter)
 Vue.prototype.$http = axios;
 Vue.prototype.PMT = PMT;
+Vue.prototype.storageKeyName = storageKeyName;
 // Vue.use(Vuex)
 
 //NProgress.configure({ showSpinner: false });
@@ -37,7 +39,8 @@ router.beforeEach((to, from, next) => {
     if (to.path == '/login') {
         sessionStorage.removeItem('user');
     }
-    let user = JSON.parse(sessionStorage.getItem('user'));
+    let user = JSON.parse(sessionStorage.getItem(storageKeyName.userInfo));
+
     if (!user && to.path != '/login') {
         next({ path: '/login' })
     } else {

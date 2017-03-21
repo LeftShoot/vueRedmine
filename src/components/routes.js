@@ -3,9 +3,9 @@
  */
 // import Login from './views/Login.vue'
 // import NotFound from './views/404.vue'
-import Home from './views/Home.vue'
-import Login from  './views/Login.vue'
-import ViewTask from './views/ViewTask.vue'
+import Home from '../views/Home.vue'
+import Login from  '../views/Login.vue'
+import ViewTask from '../views/ViewTask.vue'
 // import Main from './views/Main.vue'
 // import Table from './views/nav1/Table.vue'
 // import Form from './views/nav1/Form.vue'

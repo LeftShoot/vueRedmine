@@ -14,7 +14,7 @@
   <el-menu-item index="11">报表</el-menu-item>
   <el-menu-item index="12">团队</el-menu-item>
   <el-menu-item index="13">考勤</el-menu-item>
-  <el-menu-item index="14" @click="$router.push($router.options.routes[1].children[0].path)">我的</el-menu-item>
+  <el-menu-item index="14" @click="$router.push('ViewTask')">我的</el-menu-item>
 </el-menu>
 				<transition name="fade" mode="out-in">
 							<router-view></router-view>
